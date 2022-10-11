@@ -12,26 +12,21 @@ class _PageRState extends State<PageR> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        drawer: Drawer(),
-        body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("هل تريد تشغيل الاشعارات "),
-              Switch(
-                  activeColor: Colors.red,
-                  activeTrackColor: Colors.blue,
-                  inactiveThumbColor: Colors.black,
-                  inactiveTrackColor: Colors.green,
-                  value: notify,
-                  onChanged: (val) {
-                    setState(() {
-                      notify = val;
-                    });
-                  })
-            ],
-          ),
-        ));
+      appBar: AppBar(),
+      drawer: Drawer(),
+      body: Center(
+          child: SwitchListTile(
+              title: Text("هل تريد تشغيل الاشعارات "),
+              subtitle: Text("الرجاء الإختيار "),
+              isThreeLine: true,
+              secondary: Icon(Icons.notifications_active),
+              controlAffinity: ListTileControlAffinity.trailing,
+              value: notify,
+              onChanged: (val) {
+                setState(() {
+                  notify = val;
+                });
+              })),
+    );
   }
 }
