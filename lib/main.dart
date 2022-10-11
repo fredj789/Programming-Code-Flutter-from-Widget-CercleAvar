@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tuto/radios.dart';
+import 'package:tuto/tuto.dart';
 
 void main() {
   runApp(MyApp());
