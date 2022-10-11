@@ -14,20 +14,15 @@ class _PageRState extends State<PageR> {
     return Scaffold(
         appBar: AppBar(),
         drawer: Drawer(),
-        body: Container(
-          color: Colors.white,
-          child: ListTile(
-            title: Text("S20 Ultra"),
-            subtitle: Text("Samsung"),
-            leading: Icon(Icons.mobile_friendly),
-            trailing: Text("Price 200 "),
-            onTap: () {
-              print("On tab");
-            },
-            onLongPress: () {
-              print("Long Press");
-            },
-            tileColor: Colors.green,
+        body: Center(
+          child: CircleAvatar(
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.red,
+            child: Text(
+              "wa",
+              style: TextStyle(fontSize: 30),
+            ),
+            radius: 50, // DIMENSION
           ),
         ));
   }
